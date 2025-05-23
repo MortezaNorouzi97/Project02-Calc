@@ -1,0 +1,144 @@
+body,
+html {
+    background: #6e6e70;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 425px;
+    padding-bottom: 20px;
+    border-radius: 14px;
+}
+
+.display {
+    width: 100%;
+    height: 30px;
+    padding: 40px 0;
+    background: #06dd95;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.row {
+    width: 420px;
+    float: left;
+}
+
+input[type="button"] {
+    width: 60px;
+    height: 60px;
+    float: left;
+    padding: 0;
+    margin: 5px;
+    background: #ecedef;
+    border: none;
+    font-size: 30px;
+    border-radius: 50%;
+    font-weight: 700;
+    color: #5e5858;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 350px;
+    height: 60px;
+    float: right;
+    padding: 0;
+    border: none;
+    background: none;
+    text-align: right;
+    font-weight: 700;
+    font-size: 60px;
+    max-width: 0 25px;
+    text-align: left;
+}
+
+.red {
+    background-color: #d4181b !important;
+    color: #ffffff !important;
+}
+
+.green {
+    background: #479424 !important;
+    color: #ffffff !important;
+    width: 200px !important;
+}
+
+#today {
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    transform: translateX(-50%) translateY(-50%);
+    color: aqua;
+    font-size: 25px;
+    letter-spacing: 7px;
+}
+
+.thisClock {
+    position: absolute;
+    left: 50%;
+    top: 9%;
+    transform: translateX(-50%) translateY(-50%);
+    color: aqua;
+    font-size: 25px;
+    letter-spacing: 7px;
+}
+
+
+/* -------- Responsive for Mobile --------- */
+@media (max-width: 480px) {
+
+    .container {
+        width: 80%;
+        height: 60%;
+        padding: 10px 15px;
+    }
+
+    .row {
+        float: none !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100% !important;
+    }
+
+    input[type="button"] {
+        width: 13%;
+        height: 20px;
+        margin: 4px 1.5%;
+        font-size: 20px;
+    }
+
+    input[type="text"] {
+        width: 100% !important;
+        font-size: 40px !important;
+        height: 50px !important;
+    }
+
+    .display {
+        height: 70px !important;
+        padding: 20px 0 !important;
+    }
+
+    .green {
+        width: 47% !important;
+    }
+
+    #today,
+    .thisClock {
+        position: static !important;
+        font-size: 16px !important;
+        letter-spacing: 3px !important;
+        margin: 15px auto 0 auto;
+        text-align: center;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+    }
+}

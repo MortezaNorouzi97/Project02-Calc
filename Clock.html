@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .thisClock {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: aqua;
+            font-size: 60px;
+            letter-spacing: 7px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="MyClockDisplay" class="thisClock"></div>
+
+    <script>
+
+        function clockRunner() {
+            var d = new Date();
+            var hour = d.getHours();
+            var minute = d.getMinutes();
+            var second = d.getSeconds();
+
+            var p = "AM"
+            if (hour > 12) {
+                hour -= 12;
+                p = "PM";
+            }
+
+            if (hour < 10) {
+                hour = "0" + hour;
+            }
+
+            if (minute < 10) {
+                minute = "0" + minute;
+            }
+
+            if (second < 10) {
+                second = "0" + second;
+            }
+
+            var clock = hour + ":" + minute + ":" + second + " " + p;
+            document.getElementById('MyClockDisplay').textContent = clock;
+
+            setTimeout(clockRunner, 1000);
+        }
+
+        clockRunner();
+
+    </script>
+
+</body>
+
+</html>
