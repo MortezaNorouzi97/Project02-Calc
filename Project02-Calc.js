@@ -3,7 +3,16 @@ function addToCalculator(value) {
 }
 
 function finilize() {
-    document.getElementById('displayResult').value = eval(document.getElementById('displayResult').value);
+    const mathInput = document.getElementById('displayResult').value;
+
+    if (mathInput.trim() === "") {
+        document.getElementById('displayResult').value = "";
+        return;
+
+    } else {
+        document.getElementById('displayResult').value = eval(document.getElementById('displayResult').value);
+    }
+
 }
 
 function mathCalculator(mathFunc) {
